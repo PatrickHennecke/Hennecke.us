@@ -1,0 +1,231 @@
+header {
+background: #556B2F;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+body {
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+nav {
+	width: 100%;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-stlye: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 25px;
+	padding-bottom: 5px;
+}
+
+nav a {
+	color: #222 !important;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	color: #000 !important;
+}
+
+/*Main Content*/
+.HeaderHome {
+	width: 100%;
+	height: 1100px;
+	background-image: url(Mybackground.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #222;
+}
+
+@keyframes Zoomout {
+	0% {transform: scale(1.2,1.2);}
+	100% {transform: scale(1,1);}
+}
+
+.Name {
+	position: absolute;
+  top: 20% !important;
+  width: 100%;
+  text-align: center;
+	opacity: 0.75;
+	font-weight: bold;
+}
+
+.Name {
+	text-shadow: 2px 2px white;
+	position: relative;
+	font-size: 70px;
+	animation-name: Fall;
+	animation-duration: 5s;
+}
+
+.Title{
+	position: absolute;
+	top: auto;
+  width: 100%;
+  text-align: center;
+	opacity: 0.75;
+	font-weight: lighter;
+}
+
+.Title {
+	text-shadow: 1px 1px white;
+	position: relative;
+	font-size: 30px;
+	animation-name: Fall2;
+	animation-delay: 1s;
+	animation-duration: 6s;
+}
+
+@@keyframes Fall2 {
+	0% {top: -200px;}
+	50%
+	100% {top: 150px}
+}
+
+@keyframes Fall {
+	0% {top: -200px;}
+	50%,
+	100% {top: 220px;}
+}
+/* for job title
+.Name h2 {
+	test-shadow: 2px 2px white;
+	position: relative;
+	animation-name: Fall;
+	animation-duration: 5s;
+}
+
+@keyframes Float {
+	0% {top: 200px;}
+	50%,
+	100% {top: 0px;}
+}
+*/
+
+section {
+	border: 0;
+	background-color: #222;
+
+}
+
+.Info {
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+.Info h3 {
+	text-shadow: 1px 1px #556B2F;
+	position:relative;
+	animation-name: slidelr;
+	animation-duration: 3s;
+}
+
+@keyframes slidelr {
+	0% {left:-600px;}
+	50%,
+	100% {left:0px;}
+}
+
+hr {
+	display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px;
+	background-color: white;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.Quick_Access {
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+.Quick_Access h3 {
+	position: relative;
+	animation-name: sliderl;
+	animation-duration: 3s;
+}
+
+@keyframes sliderl {
+	0% {left:600px;}
+	50%,
+	100% {left:0px;}
+}
+
+.Quick_Access a {
+	text-decoration: none !important;
+	color: #556B2F;
+	text-shadow: 0.5px 0.5px white;
+	font-size: 20px;
+}
+
+.Quick_Access a:hover {
+	color: #000;
+}
+
+/*Footer*/
+footer {
+	background-color: #556B2F;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding-bottom:20px;
+}
+
+footer li {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+footer a {
+	font-size:auto;
+	color: white;
+}
+
+footer a:hover {
+	color: #000;
+}
+
+html {
+	font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+	font-size: .05rem;
+}
+
+@media (max-width: 768px) {
+		font-size: .1rem;
+}
+
+@media (max-width: 992px) {
+		font-size: .6rem;
+}
+
+@media (max-width: 1200px) {
+		font-size: .8rem;
+}
