@@ -59,16 +59,16 @@ nav a:hover {
 }
 
 .Name {
+	color: #dc3545;
 	position: absolute;
   top: 20% !important;
   width: 100%;
   text-align: center;
-	opacity: 0.75;
+	opacity: 0.95;
 	font-weight: bold;
 }
 
 .Name {
-	text-shadow: 2px 2px white;
 	position: relative;
 	font-size: 70px;
 	animation-name: Fall;
@@ -85,6 +85,7 @@ nav a:hover {
 }
 
 .Title {
+	color: #343a40;
 	text-shadow: 1px 1px white;
 	position: relative;
 	font-size: 30px;
