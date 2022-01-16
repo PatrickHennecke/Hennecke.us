@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: hennecke.us
+Token: 4310302e0e3cb8fdf632b8d83ecc8f6964e8bfc39da76e90e3c4dcf180402749
