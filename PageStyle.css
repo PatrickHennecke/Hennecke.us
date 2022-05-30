@@ -1,5 +1,5 @@
 header {
-background: #556B2F;
+background: #4b5e2a;
 }
 
 header::after {
@@ -76,7 +76,6 @@ nav a:hover {
 }
 
 .Title{
-	position: absolute;
 	top: auto;
   width: 100%;
   text-align: center;
@@ -93,7 +92,7 @@ nav a:hover {
 	animation-duration: 6s;
 }
 
-@@keyframes Fall2 {
+@keyframes Fall2 {
 	0% {top: -200px;}
 	50%
 	100% {top: 150px}
@@ -104,12 +103,31 @@ nav a:hover {
 	50%,
 	100% {top: 220px;}
 }
-/* for job title
+
 .Name h2 {
-	test-shadow: 2px 2px white;
 	position: relative;
 	animation-name: Fall;
 	animation-duration: 5s;
+}
+
+.Passions {
+	color: #222;
+	
+	position: relative;
+
+	padding-top: 25%;
+}
+
+.Passions h3 {
+	color: #222;
+	text-shadow: 1px 1px white;
+}
+
+.Passions a {
+	text-decoration: none !important;
+	color: #556B2F;
+	text-shadow: 0.5px 0.5px white;
+	font-size: 20px;
 }
 
 @keyframes Float {
@@ -117,7 +135,7 @@ nav a:hover {
 	50%,
 	100% {top: 0px;}
 }
-*/
+
 
 section {
 	border: 0;
@@ -126,6 +144,7 @@ section {
 }
 
 .Info {
+	position: relative;
 	top: 50%;
 	width: 100%;
 	text-align: center;
@@ -138,6 +157,25 @@ section {
 	position:relative;
 	animation-name: slidelr;
 	animation-duration: 3s;
+}
+
+.About {
+	padding-left: 10%;
+	padding-right: 10%;
+	position: relative;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: white;
+	background-color: #162222;
+}
+
+.About img {
+	margin-left: 80%;
+  	margin-top: -5%;
+  	border-radius: 50%;
+  	width: 98px;
+  	height: 90px;
 }
 
 @keyframes slidelr {
@@ -157,7 +195,8 @@ hr {
 }
 
 .Quick_Access {
-	top: 50%;
+	position: relative;
+	top: 25%;
 	width: 100%;
 	text-align: center;
 	color: white;
@@ -175,11 +214,13 @@ hr {
 	100% {left:0px;}
 }
 
-.Quick_Access a {
-	text-decoration: none !important;
-	color: #556B2F;
-	text-shadow: 0.5px 0.5px white;
-	font-size: 20px;
+.Equipped {
+	position: inherit;
+}
+
+.Equipped a {
+	color: white;
+	text-shadow: black;
 }
 
 .Quick_Access a:hover {
@@ -200,7 +241,7 @@ ul {
 
 /*Footer*/
 footer {
-	background-color: #556B2F;
+	background-color: #4b5e2a;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
