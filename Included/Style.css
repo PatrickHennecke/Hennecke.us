@@ -68,7 +68,7 @@ main {
 }
 
 .About {
-  background-color: #182828;
+  background-color: #162222;
 }
 
 .tab {
@@ -128,7 +128,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px;
-	background-color: white;
+	background-color: black;
   margin: 1em 0;
   padding: 0;
 }
