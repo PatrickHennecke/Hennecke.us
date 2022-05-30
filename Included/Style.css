@@ -50,6 +50,31 @@ main {
 	font-size: 10px !important;
 }
 
+.row {
+  position: right;
+	display: flex;
+}
+
+.column {
+	flex: 50%
+}
+
+.Contact h2 {
+  padding-left: 12px;
+}
+
+.Contact h3 {
+  padding-left: 24px;
+}
+
+.About {
+  background-color: #182828;
+}
+
+.tab {
+  margin-left: 40px;
+}
+
 .Info h1 {
   padding-top: 5px;
   font-size: 16px;
