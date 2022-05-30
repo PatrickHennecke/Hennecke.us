@@ -71,12 +71,10 @@ nav a:hover {
 	text-shadow: 2px 2px white;
 	position: relative;
 	font-size: 70px;
-	animation-name: Fall;
-	animation-duration: 5s;
 }
 
 .Title{
-	top: auto;
+	top: 20px;
   width: 100%;
   text-align: center;
 	opacity: 0.75;
@@ -88,20 +86,13 @@ nav a:hover {
 	position: relative;
 	font-size: 30px;
 	animation-name: Fall2;
-	animation-delay: 1s;
 	animation-duration: 6s;
 }
 
 @keyframes Fall2 {
 	0% {top: -200px;}
-	50%
-	100% {top: 150px}
-}
-
-@keyframes Fall {
-	0% {top: -200px;}
 	50%,
-	100% {top: 220px;}
+	100% {top: 20px}
 }
 
 .Name h2 {
@@ -241,11 +232,11 @@ ul {
 
 /*Footer*/
 footer {
-	background-color: #4b5e2a;
+	background-color: #405025;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
-	padding-bottom:20px;
+	padding-bottom:10px;
 }
 
 footer li {
