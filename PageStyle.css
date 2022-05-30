@@ -63,11 +63,12 @@ nav a:hover {
   top: 20% !important;
   width: 100%;
   text-align: center;
-	opacity: 0.95;
+	opacity: 0.75;
 	font-weight: bold;
 }
 
 .Name {
+	text-shadow: 2px 2px white;
 	position: relative;
 	font-size: 70px;
 	animation-name: Fall;
@@ -84,7 +85,6 @@ nav a:hover {
 }
 
 .Title {
-	color: #343a40;
 	text-shadow: 1px 1px white;
 	position: relative;
 	font-size: 30px;
@@ -130,6 +130,7 @@ section {
 	width: 100%;
 	text-align: center;
 	color: white;
+	background-color: #182828;
 }
 
 .Info h3 {
@@ -150,7 +151,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px;
-	background-color: white;
+	background-color: black;
   margin: 1em 0;
   padding: 0;
 }
@@ -183,6 +184,18 @@ hr {
 
 .Quick_Access a:hover {
 	color: #000;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.row {
+	display: flex;
+}
+
+.column {
+	flex: 50%
 }
 
 /*Footer*/
