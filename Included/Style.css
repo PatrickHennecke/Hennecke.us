@@ -1,5 +1,5 @@
 header {
-  background: #556B2F;
+  background: #4b5e2a;
 }
 
 header::after {
@@ -69,6 +69,14 @@ main {
 
 .About {
   background-color: #162222;
+}
+
+.About img {
+  margin-left: 80%;
+  margin-top: -5%;
+  border-radius: 50%;
+  width: 98px;
+  height: 90px;
 }
 
 .tab {
@@ -222,7 +230,7 @@ hr {
 
 /*Footer*/
 footer {
-  background-color: #556B2F;
+  background-color: #4b5e2a;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
