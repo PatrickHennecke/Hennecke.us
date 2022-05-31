@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Raspberry Pi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="NetworkStyle.css" type="text/css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top navbar-expand-lg bg navbar-dark">
+      <div class="navbar-header">
+        <!-- <a class="navbar-brand" href="#">Logo</a> -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="navbar-nav justify-content-left">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../Resume_Patrick Hennecke.pdf">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="../Projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="../Contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="../Construction.html">HNTE</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="Instruction container-fluid justify-content-center">
+    <h1>Instructions for:</h1>
+    <h2>Raspberry pi Samba Server</h2>
+    <h4><button type="button" class="toggler" data-toggle="collapse" data-target="#Prereq" aria-controls="Prereq">Prerequisites</button></h4>
+    <hr />
+    <ol class="collapse" id="Prereq">
+      <li>Setup Raspberry Pi (OS: optional)</li>
+      <a href="https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/2">More Info</a>
+      <li>Required: Hard drive to store data</li>
+      <li>Connect Raspberry pi to network</li>
+      <li>Setup SSH [putty] to connect to Raspberry pi over network (optional)</li>
+      <li>Connect to Raspberry pi</li>
+      <li>Run <code>sudo apt-get update</code></li>
+    </ol>
+    <hr />
+    <p>First we will need to install a few things.</p>
+    <ul>
+      <li>Install drivers for hard drive and Samba by running
+        <code>sudo apt-get install ntfs-3g samba</code>
+        <br>(ntfs-3g may differ based on what file system your hard drive has)
+        More info about file systems below<br>
+        <a href="https://www.eassos.com/tutorial/hard-drive/hard-drive-file-system.php">More Info</a>
+      </li>
+      <li>Make Directory <code>sudo mkdir /media/Server</code>
+      <br>This is where all your files will load from
+      (optional: Location/name /media/Server)</li>
+      <li>Next Find UUID of drive <code>sudo blkid</code>
+      Here you will look for the label of your drive, then copy and save<br>
+    it's UUID (for more information on what a UUID is and what it looks like follow link)
+  <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a></li>
+  <li>After that, edit fstab <code>sudo nano /etc/fstab</code>
+  In the text editor type <br>
+  <code>UUID=#yourUUID /media/Server(or your name) ntfs-3g defaults,noatime 0 2</code>
+It should look like this<br>
+<img class="responsive" src="Capture.PNG" alt="A Mounted drive"><br>
+Once this is done save it.</li>
+<li>To make sure it was mounted run <code>sudo reboot</code> log back in,
+and check the directory <code>cd /media/Server</code>
+Enter <code>ls</code> Enter. <br> Here you should see everything on your hard drive.</li>
+<li>Next setup Samba! <code>sudo nano /etc/samba/smb.conf</code></li>
+<li>scroll down to the bottom with down arrow key and add
+<img class="responsive" src="Samba.PNG" alt="Setup file Server"></li>
+<li><code>sudo reboot</code></li>
+<li>Enjoy</li>
+    </ul>
+  </main>
+
+  <footer class="Social fixed-bottom">
+    <ul>
+      <li><a class="col-md-4 text-center" href="https://www.linkedin.com/in/patrick-hennecke-4b9537194/"><i class="fa fa-linkedin"></i></a></li>
+      <li><a class="col-md-4 text-center" href="https://github.com/PatrickHennecke"><i class="fa fa-github"></i></a></li>
+      <li><a class="col-md-4 text-center" href="https://www.instagram.com/im_not_inventive/"><i class="fa fa-instagram"></i>
+        </a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
