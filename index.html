@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="autor" content="Patrick Hennecke">
   <meta name="description" content="Portfolio">
+  <meta name="color-scheme" content="dark">
 
   <title>Patrick Hennecke</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,12 +18,21 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
   </script>
 
-  <link rel="stylesheet" href="PageStyle.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="Style.css" type="text/css">
 
 </head>
 
 <body>
-    <header>
+    <header> 
     <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top navbar-expand-lg bg navbar-dark">
         <div class="navbar-header">
           <!-- <a class="navbar-brand" href="#">Logo</a> -->
@@ -32,108 +42,169 @@
         </div>
         <div class="collapse navbar-collapse" id="Navbar">
           <ul class="navbar-nav justify-content-left">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="./Included/Resume_Patrick Hennecke.pdf">Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="./Included/Projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="./Included/Contact.html">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="./Included/Construction.html">HNTE</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#CV">CV</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
   <main class="HeaderHome img-responsive">
-    <h1 class="Name justify-content-center">Patrick Hennecke</h1>
-    <h3 class="Title">Data Scientist</h3>
-    <br><br><br><br><br><br>
+    <section id="Home">
+      <div class="Home flex-item">
+        <div  data-aos="slide-down" data-aos-mirror="true">
+        <h3  class="Title animate__animated animate__fadeInDown">Data Scientist</h3>
+        </div>
+        <div data-aos="slide-up" data-aos-mirror="true">
+        <h1 class="Name animate__animated animate__slideInUp">Patrick Hennecke</h1>
+        </div>
+      </div>
+    </section>
 
-    <div class="Quick_Access container-fluid justify-content-center Passions">
-      <h3>My Passions</h3>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">Python</a>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">SQL</a>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">R</a>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">C#</a>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">C++</a>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">Matlab</a>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">Networking</a>
-      <a href="./Included/Projects.html" class="col-md-4 text-center">Net Core</a>
-    </div>
-    <br>
-
-    </main>
-
-
-  
-    <div class="Info container-fluid justify-content-center">
-      <hr />
-      <h3>Most Recent Projects</h3>
+  <section id="About">
+    <div class="About" data-aos="zoom-in" data-aos-mirror="true" data-aos-duration="800">
+      <h1> Ab <img src="./Included/Images/20190813_085930.jpg"> ut</h1>
       <br>
-      <div class="row">
-      <div class="column">
-      <ul>
-        <li><a href="https://drive.google.com/file/d/1newfvw1Z3Eag7SoRxYOhxr6MywsxndpV/view?usp=sharing">
-          <img src="./Included/Images/Big-Data.png"/
-          width="80" height="70"> NCAA March Maddness Prediction Project</a></li> <br>
-          <li><a >
-            <img src="./Included/Images/simulation.jpg"/
-            width="80" height="70"> </a></li>
-      </ul>
+      <p class="tab">My name is Patrick Hennecke. I am a M.S. in Data Science, B.S. in Mathematics with a minor in Physics, 
+        I have past Software Development experience, above all, I am a problem solver. I love puzzles, both logic and physical, 
+        I treasure spending my time working on different problems and thinking outside the box to reach a solution.
+        I am passionate about learning and plan to continue my learning for the rest of my life. 
+        In my spare time I often am playing video games, backpacking in the wild, camping, 
+        playing guitar, playing piano, gardening, watching movies and shows, or reading. In social settings, I enjoy being light-hearted,
+         and joking around with friends, I love understanding their different perspectives and seeing what really drives them.
+         I am purpose-driven, and I value honesty, transparency and candor.
+      </p>
     </div>
-    <div class="column">
-      <ul>
-        <li><a >
-          <img src="./Included/Images/MachineLearning.png"/
-          width="90" height="70"> </a></li> <br>
-          <li><a >
-            <img src="./Included/Images/neural-net.jpg"/
-            width="90" height="70"> </a></li>
-      </ul>
-    </div>
-  </div>
-  <hr />
-    </div>
-    <br>
-    <center>
-      <section class="Quick_Access container-fluid justify-content-center Equipped">
-        <h3><a href="./Included/Contact.html">Equipped to Succeed</a></h3>
-        <h6>Problem Solver:</h6>
-        <p>Inspired to solve new problems and learn more.</p>
-        <h6>Leadership:</h6>
-        <p>Keeping my thoughts organized and focused
-          to ensure the goal is met.</p>
-        <h6>Creativity:</h6>
-        <p>Making the most of my abilities, and seeking input from those around me.</p>
-        <h6>Analytical:</h6>
-        <p>Always considering my plans and how to accomplish them.</p>
-        <h6>Hard Worker:</h6>
-        <p>Willing to sacrifice whatever is needed.</p>
-      </center>
   </section>
-  <br>
 
-  <div class="About">
-    <hr />
-    <h2>About  <img src="./Included/Images/20190813_085930.jpg"></h2>
-    <br>
-    <p class="tab">My name is Patrick Hennecke. I am a M.S. in Data Science, B.S. in Mathematics with a minor in Physics, 
-      I have past Software Development experience, above all, I am a problem solver. I love puzzles, both logic and physical, 
-      I treasure spending my time working on different problems and thinking outside the box to reach a solution.
-      I am passionate about learning and plan to continue my learning for the rest of my life. 
-      In my spare time I often am playing video games, backpacking in the wild, camping, 
-      playing guitar, playing piano, gardening, watching movies and shows, or reading. In social settings, I enjoy being light-hearted,
-       and joking around with friends, I love understanding their different perspectives and seeing what really drives them.
-       I am purpose-driven, and I value honesty, transparency and candor.
-    </p>
-    <hr />
+  <section id="Education">
+    <div class="Education">
+    <div class="Title" data-aos="fade-in" data-aos-mirror="true" data-aos-duration="1000">
+      <h1>Education</h1>
+      <h3>Subjects & Skills</h3>
+    </div>
+      <div class="Undergraduate" data-aos="fade-right" data-aos-mirror="true">
+        <h5>B.S. in Mathematics</h5>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li> Calculus </li>
+              <li> Probability and Statistics</li>
+              <li> Ordinary Differential Equations </li>
+              <li> Discrete Math </li>
+              <li> Real Analysis </li>
+              <li> Topology </li>
+              <li> Abstract Algebra </li>
+              <li> Numerical Analysis </li>
+              <li> Engineering Dynamics </li>
+              <li> Electronics Digital Design </li>
+              <li> Analog circuits</li>
+              <li> Astronomy </li>
+        </ul> 
+          </div>
+          <div class="column">
+            <ul>
+              <li> C++ </li>
+              <li> Microsoft Excel </li>
+              <li> LaTeX </li>          
+              <li> Matlab </li>
+              <li> C# </li>
+            </ul>
+          </div>
+      </div>
+      <div class="Graduate" data-aos="fade-left" data-aos-mirror="true">
+        <h5>M.S. in Data Science</h5>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li> Data Structures and Algorithms </li>
+              <li> Modeling Infectious Diseases </li>
+              <li> Artificial Intelligence </li>
+              <li> Machine Learning </li>
+              <li> Neural Networks </li>
+              <li> Data Science </li>
+              <li> Databases </li>
+              <li> Statistical Inference </li>
+        </ul> 
+          </div>
+          <div class="column">
+            <ul>
+              <li> Python</li>
+              <li> Pandas </li>
+              <li> Numpy </li>
+              <li> Sk-learn </li>
+              <li> Tensor Flow </li>
+              <li> Seaborn </li>
+              <li> Matplot Lib </li>
+              <li> R </li>
+              <li> SQL </li>
+              <li> d3.js </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="Projects">
+    <h1>Projects</h1>
+    <div class="Projects row" data-aos="slide-left" data-aos-mirror="true">
+      <div class="column">
+      <h4> March Maddness Prediction Model </h4>
+      <ul>
+        <li> <a href="https://drive.google.com/file/d/1newfvw1Z3Eag7SoRxYOhxr6MywsxndpV/view?usp=sharing">
+          Data Cleaning - Python: Pandas</a></li>
+        <li> <a href="Construction.html">Machine Learning</a></li>
+      </ul>
+      <h4> Cryptography </h4>
+      <ul>
+        <li><a href="https://github.com/PatrickHennecke/E2EE">End to end encryption app - C++</a></li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h4> Solexergy App </h4>
+      <ul>
+        <li><a href="Construction.html"> Mobil Demo - Xamarin Forms </a></li>
+        <li><a href="Construction.html">API - C# & Azure</a></li>
+      </ul>
+      <h4> Samba Server </h4>
+      <ul>
+        <li><a href="SambaServer/Raspberrypi.html">Documentation - Raspberry pi</a></li>
+      </ul>
+      <h4> Disease Modeling </h4>
+      <ul>
+        <li><a href="Construction.html"> COVID 19 - R </a></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="CV">
+    <h1>CV</h1>
+    <embed src="./Included/Resume_Patrick Hennecke.pdf" type="application/pdf"/>
+  </section>
+
+  <section id="Contact">
+    <div data-aos="fade" data-aos-mirror="true" data-aos-duration="1000">
+    <h1>Contact</h1>
+    <h2 class="Email container-fluid">Email:<br>contact@hennecke.us </h2>
   </div>
+  </section>
 
-  <footer class="Social">
-    <ul>
-      <li><a class="col-md-4 text-center" href="https://www.linkedin.com/in/patrick-hennecke-4b9537194/"><i class="fa fa-linkedin"></i></a></li>
-      <li><a class="col-md-4 text-center" href="https://github.com/PatrickHennecke"><i class="fa fa-github"></i></a></li>
-        </a></li>
-    </ul>
-  </footer>
+  </main>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="index.js"></script>
+    
 </body>
 
 </html>
