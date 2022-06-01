@@ -8,3 +8,7 @@ var scroll = new SmoothScroll('.navbar a[href*="#"]', {
 
 	}
 });
+
+AOS.init({
+    disable: 'mobile'
+  });
