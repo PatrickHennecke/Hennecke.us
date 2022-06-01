@@ -16,7 +16,7 @@ header::after {
 	z-index: 1;
 	display: flex;
 	width: 100%;
-	height: 60px;
+	min-height: 2rem;
 	background: var(--nav-color);
 }
 
@@ -29,9 +29,9 @@ nav ul{
 
 nav li {
 	display: inline-block;
-	margin-left: 15px;
-	padding-top: 15px;
-	padding-bottom: 5px;
+	margin-left: 1rem;
+	padding-top: 1rem;
+	padding-bottom: .25rem;
 }
 
 nav a {
@@ -52,7 +52,6 @@ nav a:hover {
 }
 
 section {
-	height: 100vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
@@ -61,19 +60,17 @@ section {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background-color: var(--main-background);
+	background-color: var;
+	min-height: 100vh;
+	max-width: 100%;
 }
 
 section h1,h2,h3,h4,h5 {
 	color: var(--main-text-color)
 }
 
-section h2 {
-
-}
-
-section h3 {
-
+section h1 {
+	font-size: 7rem;
 }
 
 section p,li {
@@ -86,21 +83,22 @@ section#Home {
 }
 
 section#About {
-	/* background: url(/.Included/Images/About.jpg) no-repeat center center/cover; */
+	background-color: var(--main-background);
 }
 
 #About img {
 	margin-top: -5%;
 	border-radius: 50%;
-	width: 198px;
-	height: 190px;
+	width: 20%;
+	height: 19%;
   }
 
 .About {
 	background-color: #4b5e2a;
-	padding: 8rem;
-	margin-left: 1rem;
-	margin-right: 1rem;
+	padding: 8%;
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
   	border-radius: 1rem;
   	box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
 }
@@ -128,13 +126,36 @@ section#Projects {
 }
 
 section#CV {
-	padding-top: 5%;
 	justify-content: baseline;
+	background-color: var(--main-background);
 }
 
-section#CV embed{
-	width: 90%;
-	height: 95%;
+section#CV h1 {
+	flex: 1
+}
+
+
+
+.embed-responsive {
+	width: 92%;
+	padding-top: 0%;
+	flex: 25
+}
+
+.flexible-container {
+    position: relative;
+    
+    height: 0;
+    overflow: hidden;
+	padding-bottom: 100%;
+}
+
+.flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 section#Contact {
@@ -153,21 +174,25 @@ section#HTNE {
 	text-align: center;
 	opacity: 0.75;
 	font-weight: lighter;
-	text-shadow: 1px 1px white;
+	text-shadow: .05rem .05rem white;
 	position: relative;
-	font-size: 30px;
+	font-size: 1.5rem;
 	color: var(--main-background);
 }
 
 .Name {
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 	text-align: center;
 	position: relative;
-  	width: clamp(200px, 100%, 600px);
+  	width: 100%;
 	opacity: 0.75;
 	font-weight: bold;
-	text-shadow: 2px 2px white;
-	font-size: 70px;
-	position: relative;
+	text-shadow: .12rem .12rem white;
 	color: var(--main-background);
 }
 
@@ -175,18 +200,50 @@ html {
 	font-size: 1rem;
 }
 
-@media (max-width: 576px) {
-	font-size: .05rem;
+.mobile-only{
+	visibility: hidden;
 }
 
-@media (max-width: 768px) {
-		font-size: .1rem;
+@media only screen and (max-width: 768px) {
+	section h1 {
+		font-size: 3.5rem;
+	}
+
+	.Name {
+		flex:1;
+		margin-left: -70%;
+	}
+
+	#About img {
+		margin-top: -5%;
+		border-radius: 50%;
+		width: 30%;
+		height: 32%;
+	  }
+
+	  .desktop-only {
+		  visibility: hidden;
+		  
+	  }
+
+	  .mobile-only {
+		  visibility: visible;
+		  flex:1
+	  }
 }
 
-@media (max-width: 992px) {
-		font-size: .6rem;
-}
+@media only screen and (max-width: 900px) {
+	.Name {
+		flex:1;
+		margin-left: -70%;
+	}
 
-@media (max-width: 1200px) {
-		font-size: .8rem;
+	.column{
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.Projects{
+		justify-content: center;
+	}
 }
