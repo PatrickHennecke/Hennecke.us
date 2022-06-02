@@ -1,3 +1,6 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
 :root {
 	--nav-color:#4b5e2a;
 	--main-background: #222;
@@ -71,6 +74,7 @@ section h1,h2,h3,h4,h5 {
 
 section h1 {
 	font-size: 7rem;
+	text-align: center;
 }
 
 section p,li {
@@ -89,8 +93,9 @@ section#About {
 #About img {
 	margin-top: -5%;
 	border-radius: 50%;
-	width: 20%;
-	height: 19%;
+	width: 13%;
+	height: 15%;
+	display: inline-block;
   }
 
 .About {
@@ -101,6 +106,10 @@ section#About {
 	margin-right: 5%;
   	border-radius: 1rem;
   	box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+}
+
+.About p {
+	margin-left: 20%;
 }
 
 section#Education {
@@ -114,25 +123,51 @@ section#Education {
 
 section#Projects {
 	background: url(./Included/Images/Projects.jpg) no-repeat center center/cover;
+	justify-content: baseline;
 }
 
 .Projects {
 	background-color: #4b5e2a;
-	padding: 8%;
 	margin-top: 2%;
+	margin-bottom: 1%;
 	margin-left: 5%;
 	margin-right: 5%;
-  	border-radius: 1rem;
+  	border-radius: 0.5rem;
   	box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
 }
 
-.details {
-	padding: 4rem;
+.media-scroller {
+	--spacer: var(--size-3);
+	display: grid;
+	gap: var(--size-2);
+	grid-auto-flow: column;
+	grid-auto-columns: 92%;
+	padding: 0 var(--spacer) var(--spacer);
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
 }
 
-.column{
-	padding-left: 5rem;
-	padding-right: 5rem;
+.media-element {
+	display: grid;
+	grid-template-rows: min-content;
+	gap: var(--size-3);
+	/* padding: var(--size-0); */
+	background: var(--surface-2);
+	border-radius: var(--radius-2);
+	box-shadow: var(--shadow-2);
+}
+
+video {
+	width: 75%;
+}
+
+.snaps-inline {
+	scroll-snap-type: inline mandatory;
+	scroll-padding-inline: var(--spacer);
+}
+
+.snaps-inline > * {
+	scroll-snap-align: start;
 }
 
 .Projects a {
@@ -268,4 +303,41 @@ html {
 	}
 }
 
+body {
+	min-height: 100vh;
+}
 
+main {
+	z-index: 100;
+	flex-grow: 1;
+}
+
+/*Footer*/
+
+footer {
+	background-color: var(--nav-color);
+	align-items: center;
+	display: flex;
+	height: 3rem;
+	justify-content: center;
+	position:sticky;
+	width: 100%;
+	top: 100%;
+	z-index: 1;
+  }
+  
+  footer li {
+	display: inline-block;
+	  text-decoration: none;
+	text-transform: uppercase;
+  }
+  
+  footer a {
+	font-size: suto;
+	color: white;
+  }
+  
+  
+  footer a:hover {
+	color: #000;
+  }
