@@ -20,28 +20,29 @@
 
 </head>
 
-<body>
-  <header>
+<body data-barba="wrapper">
+  <header data-barba="container"> 
     <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top navbar-expand-lg bg navbar-dark">
-      <div class="navbar-header">
-        <!-- <a class="navbar-brand" href="#">Logo</a> -->
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle Navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="Navbar">
-        <ul class="navbar-nav justify-content-left">
-          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="../Resume_Patrick Hennecke.pdf">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="../Projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="../Contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="../Construction.html">HNTE</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+        <div class="navbar-header">
+          <!-- <a class="navbar-brand" href="#">Logo</a> -->
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav justify-content-left">
+            <li class="nav-item"><a class="nav-link" href="../../index.html#Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../index.html#About">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../index.html#Education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../index.html#Projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../index.html#CV">CV</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../index.html#Contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <main class="Instruction container-fluid justify-content-center">
+  <main data-barba="container" class="Instruction container-fluid justify-content-center">
     <h1>Instructions for:</h1>
     <h2>Raspberry pi Samba Server</h2>
     <h4><button type="button" class="toggler" data-toggle="collapse" data-target="#Prereq" aria-controls="Prereq">Prerequisites</button></h4>
@@ -86,16 +87,18 @@ Enter <code>ls</code> Enter. <br> Here you should see everything on your hard dr
 <li><code>sudo reboot</code></li>
 <li>Enjoy</li>
     </ul>
+    <br><br><br>
   </main>
 
   <footer class="Social fixed-bottom">
     <ul>
       <li><a class="col-md-4 text-center" href="https://www.linkedin.com/in/patrick-hennecke-4b9537194/"><i class="fa fa-linkedin"></i></a></li>
       <li><a class="col-md-4 text-center" href="https://github.com/PatrickHennecke"><i class="fa fa-github"></i></a></li>
-      <li><a class="col-md-4 text-center" href="https://www.instagram.com/im_not_inventive/"><i class="fa fa-instagram"></i>
         </a></li>
     </ul>
   </footer>
+
+  <script src="https://unpkg.com/@barba/core"></script>
 </body>
 
 </html>

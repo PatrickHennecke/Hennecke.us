@@ -1,46 +1,61 @@
-header {
-  background: #556B2F;
+:root {
+	--nav-color:#4b5e2a;
+	--main-background: #222;
+	--main-text-color: white;
 }
 
 header::after {
-  content: '';
-  display: table;
-  clear: both;
+	content: '';
+	display: table;
+	clear: both;
 }
 
-body {
-  background-color: #222 !important;
-	position: relative;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  overflow: auto;
-}
-
-nav {
+.navbar {
+	top: 0;
+	z-index: 1;
+	display: flex;
 	width: 100%;
+	min-height: 2rem;
+	background: var(--nav-color);
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-stlye: none;
+nav ul{
+	display: flex;
+	list-style: none;
+	width: 100%;
+	justify-content: center;
 }
 
 nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 25px;
-  padding-bottom: 5px;
+	display: inline-block;
+	margin-left: 1rem;
+	padding-top: 1rem;
+	padding-bottom: .25rem;
 }
 
 nav a {
-  color: #222 !important;
-  text-decoration: none;
-  text-transform: uppercase;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 80%;
+	color: var(--main-background);
 }
 
 nav a:hover {
-  color: #000 !important;
+	color: #000 !important;
+	font-weight: bold;
+}
+
+section h1,h2,h3,h4,h5 {
+	color: var(--main-text-color)
+}
+
+section h1 {
+	font-size: 7rem;
+}
+
+section p,li {
+	font-size: 1.5rem;
+	color: var(--main-text-color)
 }
 
 /*Main Content*/
@@ -111,12 +126,17 @@ footer {
 	bottom: 0;
 	width: 100%;
 	text-align: center;
+	width: 100%;
+	min-height: 2rem;
+	background: var(--nav-color);
 }
 
 footer li {
   display: inline-block;
 	text-decoration: none;
-  text-transform: uppercase;
+  text-transform: uppercase;  
+	margin-left: .25rem;
+	padding-top: .25rem;
 }
 
 footer a {
@@ -127,4 +147,5 @@ footer a {
 
 footer a:hover {
   color: #000;
+  font-weight: bold;
 }
