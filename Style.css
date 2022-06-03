@@ -168,7 +168,7 @@ section#Projects {
 	grid-template-rows: min-content;
 	gap: var(--size-3);
 	/* padding: var(--size-0); */
-	background: var(--surface-2);
+	background: var(--main-background);
 	border-radius: var(--radius-2);
 	box-shadow: var(--shadow-2);
 	height: 98%;
@@ -180,10 +180,11 @@ video {
 
 .Project-title {
 	padding-top: 2rem;
+	font-size: 2.5rem;
 }
 
 .media-element p {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 .snaps-inline {
