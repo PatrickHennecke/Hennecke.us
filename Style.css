@@ -1,3 +1,7 @@
+/* ::-webkit-scrollbar {
+
+} */
+
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
@@ -53,6 +57,15 @@ nav a:hover {
 	0% {transform: scale(1.2,1.2);}
 	100% {transform: scale(1,1);}
 }
+
+/* Have to assign "overflow: scroll;" to parent but it messes things us :( */
+/* main {
+	scroll-snap-type: y mandatory;
+}
+
+.child {
+	scroll-snap-align: start;
+} */
 
 section {
 	display: -webkit-box;
@@ -119,6 +132,7 @@ section#Education {
 .Education {
 	background-color: var(--main-background);
 	padding: 2rem;
+	margin-top: 3%;
 }
 
 section#Projects {
@@ -127,19 +141,21 @@ section#Projects {
 }
 
 .Projects {
+	flex: none;
 	background-color: #4b5e2a;
-	margin-top: 2%;
-	margin-bottom: 1%;
+	margin-top: 3.5%;
+	margin-bottom: 0%;
 	margin-left: 5%;
 	margin-right: 5%;
   	border-radius: 0.5rem;
   	box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+	height: 80%;
 }
 
 .media-scroller {
 	--spacer: var(--size-3);
 	display: grid;
-	gap: var(--size-2);
+	gap: var(--spacer);
 	grid-auto-flow: column;
 	grid-auto-columns: 92%;
 	padding: 0 var(--spacer) var(--spacer);
@@ -155,10 +171,19 @@ section#Projects {
 	background: var(--surface-2);
 	border-radius: var(--radius-2);
 	box-shadow: var(--shadow-2);
+	height: 98%;
 }
 
 video {
-	width: 75%;
+	width: 55%;
+}
+
+.Project-title {
+	padding-top: 2rem;
+}
+
+.media-element p {
+	font-size: 1.5rem;
 }
 
 .snaps-inline {
@@ -217,10 +242,6 @@ section#Contact {
 	background: url(./Included/Images/Contact.jpg) no-repeat center center/cover;
 }
 
-section#HTNE {
-	/* background-image: url(https://unsplash.com/photos/DuiPYwz3CBA) no-repeat center center/cover; */
-}
-
 .flex-item{
 	width: 25%;
 }
@@ -253,6 +274,7 @@ section#HTNE {
 
 html {
 	font-size: 1rem;
+	/* overflow: hidden; */
 }
 
 .mobile-only{
@@ -303,10 +325,6 @@ html {
 	}
 }
 
-body {
-	min-height: 100vh;
-}
-
 main {
 	z-index: 100;
 	flex-grow: 1;
@@ -340,4 +358,16 @@ footer {
   
   footer a:hover {
 	color: #000;
+  }
+
+  .barba-once {
+	  opacity: 0;
+  }
+
+  .barba-once-active {
+	  transition: opacity 1s linear;
+  }
+
+  .barba-once-to {
+	  opacity: 1;
   }

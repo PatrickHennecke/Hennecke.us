@@ -26,8 +26,9 @@
 
 </head>
 
-<body>
-    <header> 
+<body data-barba="wrapper">
+  
+    <header data-barba="container"> 
     <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top navbar-expand-lg bg navbar-dark">
         <div class="navbar-header">
           <!-- <a class="navbar-brand" href="#">Logo</a> -->
@@ -48,8 +49,9 @@
       </nav>
     </header>
 
-  <main class="HeaderHome img-responsive">
-    <section id="Home">
+  <main data-barba="container" class="parent img-responsive">
+    <!-- <div class="container"> -->
+    <section class="child" id="Home">
       <div class="Home flex-item">
         <div  data-aos="slide-down" data-aos-mirror="true">
         <h3  class="Title">Data Scientist</h3>
@@ -60,7 +62,7 @@
       </div>
     </section>
 
-  <section id="About">
+  <section class="child" id="About">
     <div class="About" data-aos="zoom-in" data-aos-mirror="true" data-aos-duration="800" data-aos-offset="0">
       <h1> Ab <img src="./Included/Images/20190813_085930.jpg"> ut</h1>
       <br>
@@ -76,7 +78,7 @@
     </div>
   </section>
 
-  <section id="Education">
+  <section class="child" id="Education">
     <div class="Education">
     <div class="Title" data-aos="fade-in" data-aos-mirror="true" data-aos-duration="1000" data-aos-offset="0">
       <h1>Education</h1>
@@ -151,12 +153,12 @@
   </section>
 
   
-  <section id="Projects">
+  <section class="child" id="Projects">
     <div class="Projects">
       <center>
       <h1>Projects</h1>
     </center>
-      <div class="media-scroller snaps-inline">
+      <div class="media-scroller snaps-inline" id="horizontal">
         <div class="media-element">
         <center><h2 class="Project-title">March maddness prediction model</h2>
           <a href="https://drive.google.com/file/d/1newfvw1Z3Eag7SoRxYOhxr6MywsxndpV/view?usp=sharing">
@@ -167,15 +169,14 @@
           <span><p class="page-subtitle">Data Cleaning - Python: Pandas</p>
           </span></a>
           <a href="./Included/Construction.html">
-          <p class="page-subtitle">Coming Soon! - Machine Learning</p></center>
-          </a>
+          <p class="page-subtitle">Coming Soon! - Machine Learning</p></a></center>
+          
         </div>
 
         <div class="media-element">
         <center><h2 class="Project-title">Cryptography</h2>
           <a href="./Included/Construction.html">
-          <p class="page-subtitle">Coming Soon! - End to end encryption app - C++</p></center>
-          </a>
+          <p class="page-subtitle">Coming Soon! - End to end encryption app - C++</p></a></center>
         </div>
 
         <div class="media-element">
@@ -184,8 +185,7 @@
           <p class="page-subtitle">Coming Soon! - Mobile Demo - Xamarin Forms</p>
           </a>
           <a href="./Included/Construction.html">
-          <p class="page-subtitle">Coming Soon! - API - C# & Azure</p></center>
-          </a>
+          <p class="page-subtitle">Coming Soon! - API - C# & Azure</p></a></center>
         </div>
 
         <div class="media-element">
@@ -195,21 +195,20 @@
             <source src="./Included/Gifs/Rasp_demo.mp4" type="video/mp4">
             Your browser does not support the video element
           </video>
-          <span><p class="page-subtitle">Documentation - Raspberry pi</p></center></span></a>
+          <span><p class="page-subtitle">Documentation - Raspberry pi</p></span></a></center>
         </div>
 
         <div class="media-element">
           <center><h2 class="Project-title">Disease Modeling</h2>
           <a href="./Included/Construction.html">
-          <p class="page-subtitle">Coming Soon! - COVID 19 - R</p>
+          <p class="page-subtitle">Coming Soon! - COVID 19 - R</p></a>
         </center>
-          </a>
         </div>
       </div>
   </div>
   </section>
 
-  <section id="CV">
+  <section class="child" id="CV">
     <h1>CV</h1>
     <div class="embed-responsive embed-responsive-4by3">
       <object data="./Included/Resume_Patrick Hennecke.pdf" type="application/pdf">
@@ -222,16 +221,17 @@
   </div>
   </section>
 
-  <section id="Contact">
+  <section class="child" id="Contact">
     <div data-aos="fade" data-aos-mirror="true" data-aos-duration="1000" data-aos-offset="0">
     <h1>Contact</h1>
     <h2 class="Email container-fluid">Email:<br>contact@hennecke.us </h2>
   </div>
   </section>
-
+  <!-- </div> -->
   </main>
 
-  <footer class="Social fixed-bottom">
+
+  <footer data-barba="container" class="Social fixed-bottom">
     <ul>
       <li><a class="col-md-4 text-center" href="https://www.linkedin.com/in/patrick-hennecke-4b9537194/"><i class="fa fa-linkedin"></i></a></li>
       <li><a class="col-md-4 text-center" href="https://github.com/PatrickHennecke"><i class="fa fa-github"></i></a></li>
@@ -245,7 +245,19 @@
   </script>
 
   <script src="index.js"></script>
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     
 </body>
 
 </html>
+
+<!-- Add snap scroll
+Add particle.js w/ pics to about page
+make cool page transition animations for opening project links
+make video change based on what link I'm hovering over (maybe with cool animation?)
+border animation to project pics and vids
+add horizontal scroll (with mouse wheel) when your mouse is inside the project media scroll div
+Make footer appear after Contact section only - ugh so annoying 
+-->
