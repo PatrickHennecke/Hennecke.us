@@ -90,6 +90,10 @@ section h1 {
 	text-align: center;
 }
 
+section h2 {
+	font-size: 4rem;
+}
+
 section p,li {
 	font-size: 1.5rem;
 	color: var(--main-text-color)
@@ -131,25 +135,32 @@ section#Education {
 
 .Education {
 	background-color: var(--main-background);
-	padding: 2rem;
 	margin-top: 3%;
+}
+
+.row {
+	font-size: 1.25rem;
+}
+
+.column{
+	width: 40%;
+
 }
 
 section#Projects {
 	background: url(./Included/Images/Projects.jpg) no-repeat center center/cover;
 	justify-content: baseline;
+	height: 80%;
+	width: 90%
 }
 
 .Projects {
-	flex: none;
+	/* flex: none; */
 	background-color: #4b5e2a;
-	margin-top: 3.5%;
-	margin-bottom: 0%;
-	margin-left: 5%;
-	margin-right: 5%;
-  	border-radius: 0.5rem;
-  	box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+  	/* border-radius: 0.5rem; */
+  	/* box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25); */
 	height: 80%;
+	width: 90%
 }
 
 .media-scroller {
@@ -161,6 +172,8 @@ section#Projects {
 	padding: 0 var(--spacer) var(--spacer);
 	overflow-x: auto;
 	overscroll-behavior-inline: contain;
+	height: 80%;
+	width: 60%
 }
 
 .media-element {
@@ -172,6 +185,7 @@ section#Projects {
 	border-radius: var(--radius-2);
 	box-shadow: var(--shadow-2);
 	height: 98%;
+	width: 40%;
 }
 
 video {
@@ -215,8 +229,6 @@ section#CV h1 {
 	flex: 1
 }
 
-
-
 .embed-responsive {
 	width: 92%;
 	padding-top: 0%;
@@ -249,6 +261,7 @@ section#Contact {
 
 .Title{
 	text-align: center;
+	justify-content: center;
 	opacity: 0.75;
 	font-weight: lighter;
 	text-shadow: .05rem .05rem white;
@@ -319,6 +332,7 @@ html {
 	.column{
 		padding-left: 2rem;
 		padding-right: 2rem;
+		font-size: 0.75rem;
 	}
 
 	.Projects{
