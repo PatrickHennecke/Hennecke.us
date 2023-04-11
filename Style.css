@@ -10,6 +10,9 @@
 	--main-background: #222;
 	--main-text-color: white;
 }
+html, body{
+	margin: 0;
+}
 
 header::after {
 	content: '';
@@ -164,7 +167,6 @@ section#Projects {
 	overflow-x: auto;
 	overscroll-behavior-inline: contain;
 	height: 80%;
-	width: 60%
 }
 
 .media-element {
@@ -176,7 +178,6 @@ section#Projects {
 	border-radius: var(--radius-2);
 	box-shadow: var(--shadow-2);
 	height: 98%;
-	width: 40%;
 }
 
 video {
