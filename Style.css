@@ -145,7 +145,6 @@ section#Projects {
 	background: url(./Included/Images/Projects.jpg) no-repeat center center/cover;
 	justify-content: baseline;
 	height: 80%;
-	width: 90%
 }
 
 .Projects {
@@ -154,7 +153,7 @@ section#Projects {
   	/* border-radius: 0.5rem; */
   	/* box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25); */
 	height: 80%;
-	width: 90%
+	width: 90%;
 }
 
 .media-scroller {
