@@ -164,10 +164,7 @@ section#Projects {
 }
 
 .Projects {
-	/* flex: none; */
 	background-color: #4b5e2a;
-  	/* border-radius: 0.5rem; */
-  	/* box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25); */
 	height: 80%;
 	width: 90%;
 }
