@@ -138,15 +138,6 @@ section#Education {
 	margin-top: 3%;
 }
 
-.row {
-	font-size: 1.25rem;
-}
-
-.column{
-	width: 40%;
-
-}
-
 section#Projects {
 	background: url(./Included/Images/Projects.jpg) no-repeat center center/cover;
 	justify-content: baseline;
@@ -327,12 +318,6 @@ html {
 	.Name {
 		flex:1;
 		margin-left: -70%;
-	}
-
-	.column{
-		padding-left: 2rem;
-		padding-right: 2rem;
-		font-size: 0.75rem;
 	}
 
 	.Projects{
